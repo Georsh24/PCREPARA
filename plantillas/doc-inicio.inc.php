@@ -1,8 +1,21 @@
+<?php
+Conexion :: abrir_conexion();
+$total_usuarios = RepositorioUsuario :: obtener_numero_usuarios(Conexion::obtener_conexion()); 
+Conexion :: cerrar_conexion();
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PcRepara</title>
+
+<?php
+if (!isset($titulo) || empty($titulo)){
+    $titulo = 'PC Repara';
+
+}
+  echo "<title>$titulo</title>";
+?>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel ="stylesheet" href="css/bootstrap.css">
