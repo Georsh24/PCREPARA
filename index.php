@@ -5,37 +5,19 @@ include_once 'app/RepositorioUsuario.inc.php';
 Conexion :: abrir_conexion();
 $total_usuarios = RepositorioUsuario :: obtener_numero_usuarios(Conexion::obtener_conexion()); 
 Conexion :: cerrar_conexion();
+
+include_once 'plantillas/doc-inicio.inc.php';
 ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>PcRepara</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel ="stylesheet" href="css/bootstrap.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/jquerty.js"></script>
-  <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="icomoon/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kalam|Shadows+Into+Light" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
 <div class="container-fuid encabezado" style="background-color: #ff4040;color:#fff;height:20%;">
   
-  <div><a><img class="imglogo" src="Pcrepara Logo.png" width="100"></a></div>
+  <div><a><img class="imglogo" src="Pcrepara Logo.png" width="100%"></a></div>
     
 </div>
 
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
-  <div class="container">
+<nav class="navbar navbar-inverse " data-spy="affix" data-offset-top="150">
+  <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
@@ -53,18 +35,18 @@ Conexion :: cerrar_conexion();
           <li><a class="textencabezado" href="#section41">Contactanos</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-        <li>
-        <a class="textencabezado" href="">
-          Usuarios registrados:
-          <?php
-          echo $total_usuarios;
-          ?>
+       
+            <li><a class="textencabezado" href="">Iniciar Sesion</a></li>
+            <li><a class="textencabezado" href="registro.inc.php">Registro</a></li>
+            <li>
+               <a class="textencabezado" href="">
+               <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
+              <?php
+                 echo $total_usuarios;
+               ?>
 
         </a>
         </li>
-            <li><a class="textencabezado" href="">Iniciar Sesion</a></li>
-            <li><a class="textencabezado" href="">Registro</a></li>
-
         </ul> 
       </div>
     </div>
@@ -72,8 +54,8 @@ Conexion :: cerrar_conexion();
 </nav>    
 <!--Aqui esta el inicio que ocntiene un slider-->
 <div id="section1" class="container-fluid">
-  <div class="container"> 
-    <h1>Inicio</h1>
+  
+    
       
     <div class="container imginicio">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -320,5 +302,6 @@ Conexion :: cerrar_conexion();
    </div>
    
     </div>
-</body>
-</html>
+<?php
+  include_once "Plantillas/documento-cierre.inc.php";
+?>

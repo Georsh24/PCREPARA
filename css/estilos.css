@@ -8,21 +8,23 @@ position: relative;
   }
   .navbar {
       margin-bottom: 0px;
+      
 
-     
   }
+ 
   @media screen and (max-width: 1000px){
   .textencabezado{
-      font-size: 14px;
+      font-size: 13px;
   }
 }
+
   
   
 .affix ~ .container-fluid {
      position: relative;
      top: 50px;
   }
-  #section1 {padding-top:0px;height:850px !important; color: #fff; background-color: rgb(112, 112, 112) !important; position: sticky;}
+  #section1 {padding-top:0px;height:850px !important; color: #fff; background-color: rgb(112, 112, 112) !important;  position: sticky;}
   #section2 {padding-top:0px;height:800px !important;color: #fff; background-color: rgb(120, 120, 120); position: sticky;}
   #section3 {padding-top:0px;height:100% !important; color: #fff; background-color:  rgb(144, 144, 144); position: sticky;}
   #section4 {padding-top:0px;height:100% !important; color: #fff; background-color:  rgba(255, 253, 253, 0); position: sticky;} 
@@ -32,6 +34,13 @@ position: relative;
      display: block;
      margin: auto;
      width: 40%;
+     height: 150px;
+     padding-left:10px;
+     padding-right: 10px;
+     
+}
+.encabezado{
+    height: 150px;
 }
 .textencabezado{
     color:white !important;
