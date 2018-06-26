@@ -17,10 +17,10 @@
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-            <li><a class="textencabezado" href="#section1">Inicio</a></li>
-          <li><a class="textencabezado" href="#section2">Promociones</a></li>
-          <li><a class="textencabezado" href="#section3">Nuestro Equipo</a></li>
-          <li><a class="textencabezado" href="#section41">Contactanos</a></li>
+            <li><a class="textencabezado" href="index.php #section1">Inicio</a></li>
+          <li><a class="textencabezado" href="index.php #section2">Promociones</a></li>
+          <li><a class="textencabezado" href="index.php #section3">Nuestro Equipo</a></li>
+          <li><a class="textencabezado" href="index.php #section41">Contactanos</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
        

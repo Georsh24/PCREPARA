@@ -1,5 +1,6 @@
   body {
       position: relative;
+      background-color: rgb(120, 120, 120);
   }
 
   .affix {
@@ -30,6 +31,13 @@
       background-color: rgb(112, 112, 112) !important;
       position: sticky;
   }
+  #section21 {
+    padding-top: 0px;
+    height: 100% !important;
+    color: #fff;
+    background-color: rgb(112, 112, 112) !important;
+    position: sticky;
+}
 
   #section2 {
       padding-top: 0px;
@@ -655,7 +663,9 @@
   .panel-body {
       color: #2b2b2b !important;
   }
+  
 
   .tarjeta {
       width: 50%;
   }
+  
