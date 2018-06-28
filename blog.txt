@@ -1,0 +1,16 @@
+CREATE DATABASE pcrepara;
+USE pcrepara;
+CREATE TABLE usuarios(
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(30) NOT NULL,
+	apellidos VARCHAR(40) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(40) NOT NULL,
+	calle VARCHAR(40) NOT NULL,
+	fraccionamiento VARCHAR(40) NOT NULL,
+	numero INT (8)NOT NULL,
+	telefono INT(10)NOT NULL,
+	fecha_registro DATETIME NOT NULL,
+	activo TINYINT NOT NULL,
+	PRIMARY KEY(id)
+);

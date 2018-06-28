@@ -2,7 +2,7 @@
     <div class="form-group">
 
         <label>Nombre de Usuario</label>
-        <input type="text" class="form-control" name="nombre" placeholder="Escribe tus nombre" <?php $validador -> mostrar_nombre() ?>>
+        <input type="text" class="form-control" name="nombre"  placeholder="Escribe tus nombre" <?php $validador -> mostrar_nombre() ?>>
         <?php
         $validador -> mostrar_error_nombre();
         ?>
@@ -46,9 +46,9 @@
     </div>
     <div class="form-group">
         <label>Fracc/Colonia</label>
-        <input type="text" class="form-control" name="fracc" placeholder="Fraccionamiento" <?php $validador -> mostrar_fracc() ?>>
+        <input type="text" class="form-control" name="fraccionamiento" placeholder="Fraccionamiento" <?php $validador -> mostrar_fraccionamiento() ?>>
         <?php
-        $validador -> mostrar_error_fracc();
+        $validador -> mostrar_error_fraccionamiento();
         ?>
     </div>
     <div class="form-group">

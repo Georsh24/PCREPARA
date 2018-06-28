@@ -56,4 +56,32 @@ public static function obtener_numero_usuarios($conexion){
     return $total_usuarios;
 }
 
+public static function insertar_usuario($conexion, $usuario){
+    $usuario_insertado = false;
+
+    if (isset($conexion)){
+        try {
+            $sql = "INSERT INTO usuarios(nombre, apellidos, email, pass, calle, fraccionamiento, numero, telefono, fecha_registro, activo) VALUES(:nombre, :apellidos, :email, :pass, :calle, :fraccionamiento, :numero, :telefono, NOW(), 0)";
+        
+            $stmt = $conexion -> prepare($sql);
+
+            
+
+            $stmt -> bindParam(':nombre', $_POST['nombre']);
+            $stmt -> bindParam(':apellidos', $_POST['apellidos']);
+            $stmt -> bindParam(':email', $_POST['email']);
+            $stmt -> bindParam(':pass', $_POST['clave']);
+            $stmt -> bindParam(':calle', $_POST['calle']);
+            $stmt -> bindParam(':fraccionamiento', $_POST['fraccionamiento']);
+            $stmt -> bindParam(':numero', $_POST['numero']);
+            $stmt-> bindParam(':telefono', $_POST['telefono']);
+          $usuario_insertado = $stmt -> execute();
+
+        }catch (PDOException $ex) {
+            print "ERROR: " . $ex -> getMessage() . "<br>";
+        }
+    }
+    return $usuario_insertado;
+}
+
 }

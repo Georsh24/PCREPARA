@@ -12,7 +12,7 @@ echo $_POST['clave2'];
 echo "<br>";
 echo $_POST['calle'];
 echo "<br>";
-echo $_POST['fracc'];
+echo $_POST['fraccionamiento'];
 echo "<br>";
 echo $_POST['numero'];
 echo "<br>";

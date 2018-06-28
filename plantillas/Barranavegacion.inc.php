@@ -12,7 +12,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand textencabezado" href="#">PCREPARA</a>
+      <a class="navbar-brand textencabezado" href="index.php">PCREPARA</a>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -24,7 +24,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
        
-            <li><a class="textencabezado" href="">Iniciar Sesion</a></li>
+            <li><a class="textencabezado" href="login.inc.php">Iniciar Sesion</a></li>
             <li><a class="textencabezado" href="registro.inc.php">Registro</a></li>
             <li>
                <a class="textencabezado" href="">

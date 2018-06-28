@@ -8,7 +8,7 @@ class ValidadorRegistro{
     private $apellidos;
     private $email;
     private $calle;
-    private $fracc;
+    private $fraccionamiento;
     private $numero;
     private $telefono;
     private $clave;
@@ -20,21 +20,21 @@ class ValidadorRegistro{
     private $error_clave;
     private $error_clave2;
     private $error_calle;
-    private $error_fracc;
+    private $error_fraccionamiento;
     private $error_numero;
     private $error_telefono;
 
 //Iniciacio y constructor de variables
-public function __construct($nombre, $apellidos, $email, $clave, $clave2, $calle, $fracc, $numero, $telefono){
+public function __construct($nombre, $apellidos, $email, $clave, $clave2, $calle, $fraccionamiento, $numero, $telefono){
     $this -> aviso_inicio = "<br><div class='alert alert-danger' role='alert'>";
     $this -> aviso_cierre = "</div>";
     $this -> nombre = "";
     $this -> apellidos = "";
     $this -> email = "";
     $this -> clave = "";
-    $this -> clave2 = "";
+    //$this -> clave2 = "";
     $this -> calle = "";
-    $this -> fracc = "";
+    $this -> fraccionamiento = "";
     $this -> numero = "";
     $this -> telefono = "";
 
@@ -44,9 +44,13 @@ public function __construct($nombre, $apellidos, $email, $clave, $clave2, $calle
     $this -> error_clave = $this -> validar_clave($clave);
     $this -> error_clave2 = $this -> validar_clave2($clave, $clave2);
     $this -> error_calle = $this -> validar_calle($calle);
-    $this -> error_fracc = $this -> validar_fracc($fracc);
+    $this -> error_fraccionamiento = $this -> validar_fraccionamiento($fraccionamiento);
     $this -> error_numero = $this -> validar_numero($numero);
     $this -> error_telefono = $this -> validar_telefono($telefono);
+
+    if ($this -> error_clave === "" && $this -> error_clave2 === ""){
+        $this -> clave = $clave;
+    }
 }
 //iniciacion
 private function variable_iniciada($variable){
@@ -145,22 +149,24 @@ private function validar_calle($calle){
     ////}
     return "";
 }
-private function validar_fracc($fracc){
-    if (!$this -> variable_iniciada($fracc)) {
+private function validar_fraccionamiento($fraccionamiento){
+    if (!$this -> variable_iniciada($fraccionamiento)) {
         return "Debes Proporcionar un fraccionamiento.";
     }else{
-        $this -> fracc = $fracc;
+        $this -> fraccionamiento = $fraccionamiento;
     } 
-    if (strlen($fracc) < 3){
+    if (strlen($fraccionamiento) < 3){
         return "Compruebe este campo";
     }
-    if (strlen($fracc) > 50){
+    if (strlen($fraccionamiento) > 50){
         return "Compruebe este campo";
     }
     //if(!preg_match("/([A-Z])* /",$fracc))  {
       //  return "Compruebe este campo";
    // }
+   
     return "";
+
 }
 private function validar_numero($numero){
     if (!$this -> variable_iniciada($numero)) {
@@ -195,32 +201,32 @@ private function validar_telefono($telefono){
     }
     return "";
 }
-public function obterner_nombre(){
+public function obtener_nombre(){
     return $this -> nombre;
 }
 
-public function obterner_email(){
+public function obtener_email(){
     return $this -> email;
 }
-public function obterner_apellidos(){
+public function obtener_apellidos(){
     return $this -> apellidos;
 }
-public function obterner_clave(){
+public function obtener_clave(){
     return $this -> clave;
 }
-public function obterner_clave2(){
-    return $this -> clave2;
-}
-public function obterner_calle(){
+//public function obtener_clave2(){
+   // return $this -> clave2;
+//}
+public function obtener_calle(){
     return $this -> calle;
 }
-public function obterner_fracc(){
-    return $this -> fracc;
+public function obtener_fraccionamiento(){
+    return $this -> fraccionamiento;
 }
-public function obterner_numero(){
+public function obtener_numero(){
     return $this -> numero;
 }
-public function obterner_telefono(){
+public function obtener_telefono(){
     return $this -> telefono;
 }
 
@@ -244,8 +250,8 @@ public function obtener_error_clave2(){
 public function obtener_error_calle(){
     return $this -> error_calle;
 }
-public function obtener_error_fracc(){
-    return $this -> error_fracc;
+public function obtener_error_fraccionamiento(){
+    return $this -> error_fraccionamiento;
 }
 public function obtener_error_nuemro(){
     return $this -> error_numero;
@@ -273,9 +279,9 @@ public function mostrar_calle(){
         echo 'value="' . $this -> calle . '"';
     }
 }
-public function mostrar_fracc(){
-    if ($this -> fracc !== ""){
-        echo 'value="' . $this -> fracc . '"';
+public function mostrar_fraccionamiento(){
+    if ($this -> fraccionamiento  !== ""){
+        echo 'value="' . $this -> fraccionamiento . '"';
     }
 }
 public function mostrar_numero(){
@@ -328,9 +334,9 @@ public function mostrar_error_calle(){
         echo $this -> aviso_inicio . $this -> error_calle .$this -> aviso_cierre;
     }
 }
-public function mostrar_error_fracc(){
-    if ($this -> error_fracc !== ""){
-        echo $this -> aviso_inicio . $this -> error_fracc .$this -> aviso_cierre;
+public function mostrar_error_fraccionamiento(){
+    if ($this -> error_fraccionamiento !== ""){
+        echo $this -> aviso_inicio . $this -> error_fraccionamiento .$this -> aviso_cierre;
     }
 }
 public function mostrar_error_numero(){
@@ -345,11 +351,12 @@ public function mostrar_error_telefono(){
 }
 public function registro_valido(){
     if ($this -> error_nombre === "" &&
+     $this -> error_apellidos === "" &&
      $this -> error_email === "" &&
      $this -> error_clave === "" &&
      $this -> error_clave2 === "" &&
      $this -> error_calle === "" &&
-     $this -> error_fracc === "" &&
+     $this -> error_fraccionamiento === "" &&
      $this -> error_numero === "" &&
      $this -> error_telefono === ""){
          return true;

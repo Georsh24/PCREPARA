@@ -36,7 +36,7 @@ class Usuario{
        return $this -> nombre;
    }
 
-   public function obterner_apellidos(){
+   public function obtener_apellidos(){
        return $this -> apellidos;
    }
 
@@ -52,7 +52,7 @@ class Usuario{
        return $this -> calle;
    }
 
-   public function obterner_fraccionamiento(){
+   public function obtener_fraccionamiento(){
        return $this -> fraccionamiento;
    }
 

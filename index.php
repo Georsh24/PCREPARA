@@ -118,7 +118,7 @@ include_once 'plantillas/Barranavegacion.inc.php';
               <div class="col-md-12">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Archivo
+                    <span class="glyphicon glyphicon-calendar" aria-hidden=""></span> Archivo
                   </div>
                   <div class="panel-body">
                   </div>
@@ -127,13 +127,13 @@ include_once 'plantillas/Barranavegacion.inc.php';
             </div>
           </div>
           <div class="col-md-8">
-            <div class="panel panel-default">
+            <div class="panel ">
               <div class="panel-heading">
-                <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Ultimas entradas
+                <span class="glyphicon glyphicon-time" aria-hidden=""></span> Ultimas entradas
               </div>
               <div class="panel-body">
 
-                <p style="color: black">Aun no hay entradas! Vuelve mas tarde!</p>
+                <p>Aun no hay entradas! Vuelve mas tarde!</p>
               </div>
             </div>
           </div>
@@ -230,11 +230,6 @@ include_once 'plantillas/Barranavegacion.inc.php';
             <br>
             <br>
             <div class="section4"></div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
       </div>

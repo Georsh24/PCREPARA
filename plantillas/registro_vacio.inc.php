@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
         <label>Fracc/Colonia</label>
-        <input type="text" class="form-control" name="fracc" placeholder="Fraccionamiento">
+        <input type="text" class="form-control" name="fraccionamiento" placeholder="Fraccionamiento">
     </div>
     <div class="form-group">
         <label>Numero</label>
